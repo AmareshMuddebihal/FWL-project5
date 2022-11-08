@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function isPalindrome()
+        {
+            var tmp=0, x, nbr, y;
+      
+            nbr = Number(document.getElementById("MyInput").value);
+      
+            y = nbr;
+            while(nbr > 0)
+            {
+              //Compare the first digit with the last digit
+              x = nbr%10;
+              nbr = parseInt(nbr/10);
+              tmp = tmp*10+x;
+            }
+            //Check whether tmp and y are the same or not.
+            if(tmp == y)
+            {
+               alert("The number is a palindrome.");
+            }
+            else
+            {
+               alert("The number is not a palindrome.");
+            }
+        }
+     </script>
+  </head>
+  <body>
+     Enter a number: <input id="MyInput" placeholder="enter number">
+     <button onclick="isPalindrome()">Check</button>
+  </body>
+</html>
+
